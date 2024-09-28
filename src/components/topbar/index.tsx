@@ -1,14 +1,21 @@
-
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChild, faBars } from "@fortawesome/free-solid-svg-icons";
 
-function Header() {
-  const [activeButton, setActiveButton] = useState<string>(''); // Track the currently active button
-  const [isSidebarOpen, setSidebarOpen] = useState<boolean>(false); // Handle sidebar state
+interface HeaderProps {
+  setActivePage: (page: string) => void; // Define the type of prop that the Header receives
+}
+
+const Header:React.FC<HeaderProps> = ({setActivePage}) => {
+
+  const logo = require('./logo.png');
+  const [activeButton, setActiveButton] = React.useState<string>('Home'); 
+  const [isSidebarOpen, setSidebarOpen] = useState<boolean>(false);
 
   const handleClick = (buttonName: string) => {
-    setActiveButton(buttonName);
+    setActiveButton(buttonName); //'Projects', 'Skills', 'Education', 'About'
+    setActivePage(buttonName);
+
   };
 
   const toggleSidebar = () => {
@@ -20,10 +27,12 @@ function Header() {
       borderRadius: "50px",
       backgroundColor: activeButton === buttonName ? "green" : "grey",
       color: activeButton === buttonName ? "lightgrey" : "black",
-      padding: "10px 20px 10px 20px",
+      padding: "10px 30px",
       textDecoration: "none",
-      display: "block",
-      textAlign: "center",
+      display: "flex",
+      justifyContent:"center",
+      alignItems:"center",
+      //textAlign: "center", 
       margin: '2px 5px',
       cursor: "pointer",
     };
@@ -47,16 +56,16 @@ function Header() {
           }}
         >
           {/* Left side with navigation */}
-          <FontAwesomeIcon icon={faChild} size="2x" color="white" style={{ padding: "0px" }} />
+          <img src={logo} alt="Logo" style={{ width: 'auto', height: '60px', padding: "2px" }} />
           <nav style={{ display: "flex", flexWrap: "wrap" }}>
             <ul style={{ 
               display: "flex", 
               listStyle: 'none', 
-              padding: 0, 
-              margin: 0, 
+              padding: 1, 
+              margin: 2, 
             }}>
               {['Projects', 'Skills', 'Education', 'About'].map((item, index) => (
-                <li key={index} style={{ flex: "1 1 150px", marginRight: '10px', minWidth: "10px"}}>
+                <li key={index} style={{ flex: "1 1 150px", marginRight: '5px', minWidth: "10px"}}>
                   <a
                     href="#"
                     onClick={() => handleClick(item)}
@@ -71,8 +80,9 @@ function Header() {
 
           {/* Right side with hamburger icon */}
           <div style={{ cursor: 'pointer' }} onClick={toggleSidebar}>
-            <FontAwesomeIcon icon={faBars} size="2x" color="white" />
+            <FontAwesomeIcon icon={faBars} size="xl" color="white" />
           </div>
+          
         </header>
       </div>
 
@@ -85,14 +95,14 @@ function Header() {
             right: 15,
             height: "40%",
             width: "250px",
-            backgroundColor: "#6d97f11d",
-            boxShadow: "-2px 0 5px rgba(0, 168, 171, 0.463)",
+            backgroundColor: "#9fbcfb1d",
+            boxShadow: "-2px 0 5px rgba(6, 164, 167, 0.463)",
             display: "flex",
             flexDirection: "column",
             padding: "15px",
-            zIndex: 999,
+            zIndex: 500,
             borderRadius:"20px",
-            transition: "transform 1s ease-in-out",
+            transition: "transformm 1s ease-in-out",
           }}
         >
           

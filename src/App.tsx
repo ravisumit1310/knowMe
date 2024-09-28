@@ -1,22 +1,38 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import HomePage from './pages/homepage';
 import Header from './components/topbar';
+import ProfilePage from './pages/pofilePage';
+import Services from './pages/mytestimonial/myTestimonial';
 
 function App() {
-  
+  const [sctivePage, setActivePage] = useState<string>('Home');
+
+  const renderContent = ()=>{
+    switch (sctivePage) {
+      case 'Projects':
+        return <ProfilePage/>;
+      case 'Skills':
+        return <Services/>;
+      case 'Education':
+        return <h1>Education</h1>;
+      case 'About':
+        return <h1>About</h1>;
+      default:
+        return <ProfilePage/>;
+    }
+  }
+
   return (
     <>
-    <Header/>
-    <div className="profile">
-      <header className="profile-header">
-        <h2>hi, This is Sumit here...</h2>
-      </header>
+      <Header setActivePage={setActivePage} /> 
 
-      <main className='profile-body'>
-        <HomePage/>
-      </main>
-    </div>
+      <div className="profile mt-50 flex-grow w-full max-w-6xl mx-auto p-6">
+
+        <main className='profile-body'>
+          {renderContent()}
+        </main>
+      </div>
     </>
   );
 }
