@@ -5,7 +5,7 @@ function ProfilePage () {
 
     return (
         <>
-            <section className="bg-gray-100 p-8">
+            <section className="bg-gray-100 p-2 ">
                 <div className="text-center mb-16">
                     <h2 className="text-sm text-gray-500">TESTIMONIALS</h2>
                     <h1 className="text-3xl font-bold text-blue-600">We are committed expert partners</h1>

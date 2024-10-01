@@ -27,8 +27,7 @@ function App() {
     <>
       <Header setActivePage={setActivePage} /> 
 
-      <div className="profile mt-50 flex-grow w-full max-w-6xl mx-auto p-6">
-
+      <div className="profile mt-0 flex-grow w-full mx-auto p-2">
         <main className='profile-body'>
           {renderContent()}
         </main>

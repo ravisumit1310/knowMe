@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChild, faBars } from "@fortawesome/free-solid-svg-icons";
+import { useNavigate, Link } from "react-router-dom";
 
 interface HeaderProps {
-  setActivePage: (page: string) => void; // Define the type of prop that the Header receives
+  setActivePage: (page: string) => void;
 }
 
 const Header:React.FC<HeaderProps> = ({setActivePage}) => {
@@ -11,6 +12,8 @@ const Header:React.FC<HeaderProps> = ({setActivePage}) => {
   const logo = require('./logo.png');
   const [activeButton, setActiveButton] = React.useState<string>('Home'); 
   const [isSidebarOpen, setSidebarOpen] = useState<boolean>(false);
+  const navigate =  useNavigate();
+
 
   const handleClick = (buttonName: string) => {
     setActiveButton(buttonName); //'Projects', 'Skills', 'Education', 'About'
@@ -20,6 +23,9 @@ const Header:React.FC<HeaderProps> = ({setActivePage}) => {
 
   const toggleSidebar = () => {
     setSidebarOpen(!isSidebarOpen);
+  };
+  const handleLogoClick = () => {
+    navigate('/homepage'); 
   };
 
   const getButtonStyle = (buttonName: string): React.CSSProperties => {
@@ -56,7 +62,12 @@ const Header:React.FC<HeaderProps> = ({setActivePage}) => {
           }}
         >
           {/* Left side with navigation */}
-          <img src={logo} alt="Logo" style={{ width: 'auto', height: '60px', padding: "2px" }} />
+          <img
+            src={logo}
+            alt="Logo"
+            style={{ width: 'auto', height: '60px', padding: "2px", cursor: 'pointer' }}
+            onClick={handleLogoClick} // Add onClick handler for the logo
+          />
           <nav style={{ display: "flex", flexWrap: "wrap" }}>
             <ul style={{ 
               display: "flex", 
@@ -91,9 +102,9 @@ const Header:React.FC<HeaderProps> = ({setActivePage}) => {
         <div
           style={{
             position: "fixed",
-            top: 80,
+            top: 70,
             right: 15,
-            height: "40%",
+            height: "20%",
             width: "250px",
             backgroundColor: "#9fbcfb1d",
             boxShadow: "-2px 0 5px rgba(6, 164, 167, 0.463)",
