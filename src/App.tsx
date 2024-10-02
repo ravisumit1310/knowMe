@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import './App.css';
 import HomePage from './pages/homepage';
 import Header from './components/topbar';
-import ProfilePage from './pages/pofilePage';
 import Services from './pages/mytestimonial/myTestimonial';
+import ExperiencePage from './pages/pofilePage';
 
 function App() {
   const [sctivePage, setActivePage] = useState<string>('Home');
@@ -11,7 +11,7 @@ function App() {
   const renderContent = ()=>{
     switch (sctivePage) {
       case 'Projects':
-        return <ProfilePage/>;
+        return <ExperiencePage/>;
       case 'Skills':
         return <Services/>;
       case 'Education':
@@ -19,7 +19,7 @@ function App() {
       case 'About':
         return <h1>About</h1>;
       default:
-        return <ProfilePage/>;
+        return <ExperiencePage/>;
     }
   }
 

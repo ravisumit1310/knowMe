@@ -30,17 +30,19 @@ const Header:React.FC<HeaderProps> = ({setActivePage}) => {
 
   const getButtonStyle = (buttonName: string): React.CSSProperties => {
     return {
-      borderRadius: "50px",
-      backgroundColor: activeButton === buttonName ? "green" : "grey",
-      color: activeButton === buttonName ? "lightgrey" : "black",
-      padding: "10px 30px",
+      backgroundColor: "transparent", 
+      color: activeButton === buttonName ? "#39032a" : "#7F7F7F", 
+      padding: "7px 25px",
       textDecoration: "none",
       display: "flex",
-      justifyContent:"center",
-      alignItems:"center",
-      //textAlign: "center", 
-      margin: '2px 5px',
+      justifyContent: "center",
+      alignItems: "center",
+      margin: "2px 5px",
       cursor: "pointer",
+      fontSize: activeButton === buttonName ? "25px":"15px",
+      fontWeight: activeButton === buttonName ? "bold" : "normal", 
+      borderBottom: activeButton === buttonName ? "2px solid #6f024d" : "2px solid transparent", 
+      transition: "border-bottom active-button 0.7s ease", 
     };
   };
 
