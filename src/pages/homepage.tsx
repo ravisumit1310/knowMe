@@ -97,15 +97,6 @@ const HomePage: React.FC = () => {
           </p>
         </div>
 
-        {/* Profile Button */}
-        {/* <div className="col-span-full text-center mt-6">
-          <button
-            onClick={getToProfile}
-            className="bg-white text-black font-semibold px-6 py-2 rounded-full hover:bg-gray-200 transition"
-          >
-            Go to Profile Page
-          </button>
-        </div> */}
       </main>
 
     </div>

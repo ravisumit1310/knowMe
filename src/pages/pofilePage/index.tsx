@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "../../components/topbar";
+import Footer from "../../components/bottombar/footer";
 
 function ExperiencePage () {
 
@@ -68,32 +69,13 @@ function ExperiencePage () {
                             <p className="text-gray-600 mt-2">Vitae suscipit tellus mauris a diam maecenas sed enim ut. Mauris augue neque gravida in fermentum. Praesent semper feugiat nibh sed pulvinar proin.</p>
                             <button className="mt-4 text-purple-500 font-bold">more</button>
                         </div>
-
-                        {/* <div className="bg-white p-6 rounded-lg shadow-md text-center">
-                            <h3 className="text-4xl font-bold text-purple-500">04</h3>
-                            <h4 className="text-xl font-bold text-gray-800 mt-4">Best Pricing</h4>
-                            <p className="text-gray-600 mt-2">Vitae suscipit tellus mauris a diam maecenas sed enim ut. Mauris augue neque gravida in fermentum. Praesent semper feugiat nibh sed pulvinar proin.</p>
-                            <button className="mt-4 text-purple-500 font-bold">more</button>
-                        </div>
-
-                        <div className="bg-white p-6 rounded-lg shadow-md text-center">
-                            <h3 className="text-4xl font-bold text-purple-500">05</h3>
-                            <h4 className="text-xl font-bold text-gray-800 mt-4">Innovations</h4>
-                            <p className="text-gray-600 mt-2">Vitae suscipit tellus mauris a diam maecenas sed enim ut. Mauris augue neque gravida in fermentum. Praesent semper feugiat nibh sed pulvinar proin.</p>
-                            <button className="mt-4 text-purple-500 font-bold">more</button>
-                        </div>
-
-                        <div className="bg-white p-6 rounded-lg shadow-md text-center">
-                            <h3 className="text-4xl font-bold text-purple-500">06</h3>
-                            <h4 className="text-xl font-bold text-gray-800 mt-4">24/7 Support</h4>
-                            <p className="text-gray-600 mt-2">Vitae suscipit tellus mauris a diam maecenas sed enim ut. Mauris augue neque gravida in fermentum. Praesent semper feugiat nibh sed pulvinar proin.</p>
-                            <button className="mt-4 text-purple-500 font-bold">more</button>
-                        </div> */}
+                       
                     </div>
 
                     
                 </section>
             </section>
+            <Footer/>
         </>
     );
 }

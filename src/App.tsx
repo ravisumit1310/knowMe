@@ -4,6 +4,8 @@ import HomePage from './pages/homepage';
 import Header from './components/topbar';
 import Services from './pages/mytestimonial/myTestimonial';
 import ExperiencePage from './pages/pofilePage';
+import EducationInfo from './pages/education/education';
+import CoverLetter from './pages/coverLetter/coverPage';
 
 function App() {
   const [sctivePage, setActivePage] = useState<string>('Home');
@@ -15,9 +17,9 @@ function App() {
       case 'Skills':
         return <Services/>;
       case 'Education':
-        return <h1>Education</h1>;
-      case 'About':
-        return <h1>About</h1>;
+        return <EducationInfo/>;
+      case 'Cover':
+        return <CoverLetter/>;
       default:
         return <ExperiencePage/>;
     }

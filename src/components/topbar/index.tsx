@@ -77,7 +77,7 @@ const Header:React.FC<HeaderProps> = ({setActivePage}) => {
               padding: 1, 
               margin: 2, 
             }}>
-              {['Projects', 'Skills', 'Education', 'About'].map((item, index) => (
+              {['Projects', 'Skills', 'Education', 'Cover'].map((item, index) => (
                 <li key={index} style={{ flex: "1 1 150px", marginRight: '5px', minWidth: "10px"}}>
                   <a
                     href="#"
@@ -92,15 +92,15 @@ const Header:React.FC<HeaderProps> = ({setActivePage}) => {
           </nav>
 
           {/* Right side with hamburger icon */}
-          <div style={{ cursor: 'pointer' }} onClick={toggleSidebar}>
+          {/* <div style={{ cursor: 'pointer' }} onClick={toggleSidebar}>
             <FontAwesomeIcon icon={faBars} size="xl" color="white" />
-          </div>
+          </div> */}
           
         </header>
       </div>
 
       {/* Sliding card from the right */}
-      {isSidebarOpen && (
+      {/* {isSidebarOpen && (
         <div
           style={{
             position: "fixed",
@@ -134,7 +134,7 @@ const Header:React.FC<HeaderProps> = ({setActivePage}) => {
             Cover Story
           </a>
         </div>
-      )}
+      )} */}
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../../components/bottombar/footer';
 
 // Define the service type
 interface Service {
@@ -12,7 +13,7 @@ interface Service {
 const Testimonial = [
   {
     image: "https://placehold.co/100x100?text=Person1",
-    name: "John Doe",
+    name: "Sumit",
     say: "This is an amazing service!",
   },
   {
@@ -44,6 +45,7 @@ const Services: React.FC = () => {
               </div>
             ))}
           </div>
+          <Footer/>
         </div>
       );
     
