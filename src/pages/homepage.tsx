@@ -29,12 +29,12 @@ const HomePage: React.FC = () => {
         <div className="w-2/3 text-white text-left ml-1">
           <h2 className="text-3xl font-semibold mb-10">Hi, Welcome To My Profile</h2>
           <p className="mb-4 text-lg">
-          I am Sumit Kumar Ravi, a B.Tech graduate in Information Technology from Christ University.<br/>  
+          I am <b>Sumit Kumar Ravi</b>, a B.Tech graduate in Information Technology from Christ University.<br/>  
           </p>
           
           <h2 className="text-2xl font-semibold mb-4">Tech Stack</h2>
           <p className="text-lg">
-          I am passionate about coding and problem-solving, with experience in web development using modern frameworks like React, Next.js, and TypeScript. I also have a strong interest in mobile application development, working extensively with Flutter. I am always eager to learn new technologies and focus on enhancing the user experience in every project I undertake.
+          I am a B.Tech graduate in Information Technology from Christ University, Bangalore, with a strong background in both mobile and web application development. My expertise lies in technologies such as Flutter, React, Next.js, and TypeScript, which I have applied in several projects. I developed and maintained the Pocket App, a mobile trading platform, where I implemented key features to optimize user trading strategies. Additionally, I worked on migrating functionalities from mobile to web for a Next.js web application, focusing on performance, real-time data interactions, and SEO improvements. At CehPoint, I led the development of a commercial app used by over 10,000 users, integrating services like Google Maps and enhancing UI/UX. My commitment to delivering high-quality solutions and continuously refining user experiences drives my passion for development.
           </p>
         </div>
       </div>
@@ -44,41 +44,39 @@ const HomePage: React.FC = () => {
         <div className="glass col-span-1 p-10">
           <h2 className="text-xl font-bold text-white">Flutter + Rest-APIs</h2>
           <p className="text-white">
-            Welcome to my profile! Here, you'll find details about my career, skills, and personal interests.
+            "One of the most intresting tech stack by Google throug which I started my career. My journey with Flutter began during my early projects, and it's been an exciting experience ever since. Flutter’s cross-platform capabilities, combined with its simplicity, make it a great choice for mobile development. With efficient state management using tools like GetX and a growing community for support, I was able to quickly build and enhance mobile applications. The ability to create visually appealing, performant apps with a single codebase has made Flutter one of my favorite tech stacks."
           </p>
         </div>
 
         {/* Next Js - Axios Experience */}
         <div className="glass col-span-1 items-center p-10 justify-center">
         <h2 className="text-xl font-bold pb-2 text-white">NextJs + TailwindCSS + Typescript</h2>
-          <p className='mt-1'>This I started in my internship period..</p>
+          <p className='mt-1'>I started working with this during my internship. It's one of the best web tech stacks with excellent community support. Next.js provides a solid structure that makes development easier, and when combined with TypeScript, it becomes even more convenient to spot errors. Overall, I had a great experience developing with this tech stack.</p>
         </div>
 
         {/* React - Redux */}
         <div className="glass col-span-1 p-5 items-center justify-center">
         <h2 className="text-xl font-bold m-2 text-white">ReactJs + Redux</h2>
-          <p className="text-white m-2 ">
-            I have worked in multiple domains, specializing in web development and design.
-          </p>
+          <p className="text-white m-2 ">"Ahhh! Here we go again! Honestly, I didn't enjoy working with Redux at first—it felt a bit overwhelming and requires a lot of structural consistency in the code. However, it's undeniably a robust stack and is widely used across the industry."</p>
         </div>
 
         {/* DSA - C++ */}
         <div className="glass col-span-1 p-5">
           <h2 className="text-xl font-bold text-white">DSA + C++</h2>
           <p className="text-white">
-            I have worked in multiple domains, specializing in web development and design.
+            I have been improving constantly my logic creatinons so that I could contribute intp this rapidly growing texh world.
           </p>
         </div>
 
         {/* YouTube Icon */}
-        <div className="glass col-span-1 flex items-center justify-center">
+        {/* <div className="glass col-span-1 flex items-center justify-center">
           <i className="fab fa-youtube icon text-white"> i am also a page</i>
-        </div>
+        </div> */}
 
         {/* Twitter Icon */}
-        <div className="glass col-span-1 flex items-center justify-center">
+        {/* <div className="glass col-span-1 flex items-center justify-center">
           <i className="fab fa-twitter icon text-white">helooo</i>
-        </div>
+        </div> */}
 
         {/* Search Bar Section */}
         <div className="border rounded-lg border-collapse col-span-2 p-5">

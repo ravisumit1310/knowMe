@@ -1,8 +1,9 @@
 import React from "react";
 import Header from "../../components/topbar";
 import Footer from "../../components/bottombar/footer";
-
-function ExperiencePage () {
+import atsicon from './ats100.png';
+import cehIcon from './cehpointIcon.png';
+function ExperiencePage() {
 
     return (
         <>
@@ -10,24 +11,34 @@ function ExperiencePage () {
                 <div className="text-left mb-5">
                     <h1 className="text-3xl font-bold font-kanit text-gray-600">Career Projects: - </h1>
                 </div>
-                
+
                 {/* Testimonials Section */}
                 <section className="space-y-8">
                     <div className="bg-pink-100 p-6 rounded-lg shadow-md">
                         <div className="flex items-center space-x-4">
-                            <img src="https://placehold.co/100x100" alt="Portrait of Nat Reynolds" className="w-16 h-16 rounded-full" />
+                            <a href="https://adityatrading.com/" target="_blank" rel="noopener noreferrer">
+                                <img src={atsicon} alt="ATS" className="w-16 h-16 rounded-full" />
+                            </a>
+
                             <div>
-                                <p className="text-gray-700">“ Vitae suscipit tellus mauris a diam maecenas sed enim ut. Mauris augue neque gravida in fermentum. Praesent semper feugiat nibh sed pulvinar proin. ”</p>
+                                <p className="text-gray-700">“ Developed a cross-platform mobile trading platform with Flutter, enabling users to trade on NSE and BSE.
+                                    Integrated key features for GTT and IPO orders, improving trading efficiency.
+                                    Collaborated on secure API integrations and focused on UI/UX enhancements for a seamless user experience. ”</p>
                                 <p className="font-bold text-gray-800 mt-2">Trading App - Android+IOS</p>
                             </div>
                         </div>
                     </div>
-                    
+
                     <div className="bg-yellow-100 p-6 rounded-lg shadow-md">
                         <div className="flex items-center space-x-4">
-                            <img src="https://placehold.co/100x100" alt="Portrait of Celia Almeda" className="w-16 h-16 rounded-full" />
+                            <a href="https://adityatrading.com/" target="_blank" rel="noopener noreferrer">
+                                <img src={atsicon} alt="ATS" className="w-16 h-16 rounded-full" />
+                            </a>
+
                             <div>
-                                <p className="text-gray-700">“ Pharetra vel turpis nunc eget lorem. Quisque id diam vel quam elementum pulvinar etiam. Urna porttitor rhoncus dolor purus non enim praesent elementum. ”</p>
+                                <p className="text-gray-700">“ Migrated Pocket App's functionalities to a web platform using Next.js for server-side rendering.
+                                    Optimized API integrations for real-time trading and investing, enhancing performance and usability.
+                                    Improved UI/UX to ensure a cohesive experience across mobile and web platforms.”</p>
                                 <p className="font-bold text-gray-800 mt-2">Tradin Web App</p>
                             </div>
                         </div>
@@ -35,10 +46,15 @@ function ExperiencePage () {
 
                     <div className="bg-green-100 p-6 rounded-lg shadow-md">
                         <div className="flex items-center space-x-4">
-                            <img src="https://placehold.co/100x100" alt="Portrait of Bob Roberts" className="w-16 h-16 rounded-full" />
+                            <a href="https://cehpoint.co.in" target="_blank" rel="noopener noreferrer">
+                                <img src={cehIcon} alt="Cehpoint" className="w-16 h-16 rounded-full" />
+                            </a>
+
                             <div>
-                                <p className="text-gray-700">“ Mauris augue neque gravida in fermentum. Praesent semper feugiat nibh sed pulvinar proin. Nibh nisl condimentum id venenatis a condimentum. ”</p>
-                                <p className="font-bold text-gray-800 mt-2">Company's Main-Website</p>
+                                <p className="text-gray-700">“Led development of a commercial app for over 10,000 users, offering services like travel, hotel bookings, and shopping.
+                                    Integrated Google Maps and Firebase, optimizing logic and UI for better app efficiency.
+                                    Participated in code reviews to maintain high-quality standards and reduce code defects.”</p>
+                                <p className="font-bold text-gray-800 mt-2">ThaiSeva Application</p>
                             </div>
                         </div>
                     </div>
@@ -69,13 +85,13 @@ function ExperiencePage () {
                             <p className="text-gray-600 mt-2">Vitae suscipit tellus mauris a diam maecenas sed enim ut. Mauris augue neque gravida in fermentum. Praesent semper feugiat nibh sed pulvinar proin.</p>
                             <button className="mt-4 text-purple-500 font-bold">more</button>
                         </div>
-                       
+
                     </div>
 
-                    
+
                 </section>
             </section>
-            <Footer/>
+            <Footer />
         </>
     );
 }
